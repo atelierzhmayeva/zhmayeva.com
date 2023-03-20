@@ -551,18 +551,8 @@ body{
 	color: #000;
 	border-bottom: 2px solid #000;
 }
-.portfolio-2 .portfolio-item {
-	-webkit-box-shadow: 0px 0px 6px 0px rgba(92,90,92,0.1);
-	-moz-box-shadow: 0px 0px 6px 0px rgba(92,90,92,0.1);
-	box-shadow: 0px 0px 6px 0px rgba(92,90,92,0.1);
-	border-radius: 10px;
-}
-.portfolio-2 .portfolio-item:hover{
-	-webkit-box-shadow: 0px 0px 16px 0px rgba(92,90,92,0.2);
-	-moz-box-shadow: 0px 0px 16px 0px rgba(92,90,92,0.2);
-	box-shadow: 0px 0px 16px 0px rgba(92,90,92,0.2);
-	transition: 0.5s;
-}
+
+
 .portfolio-2 .portfolio-item img{
 	border-radius: 10px 10px 0px 0px;
 }
@@ -1398,6 +1388,7 @@ html {
 	flex-wrap:wrap;
   }
   .card {
+	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	display: inline-flex;
 	/* justify-content: space-evenly; */
