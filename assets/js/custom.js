@@ -1,3 +1,17 @@
+$(window.location.hash).modal('show');
+$('a[data-toggle="modal"]').click(function(){
+    window.location.hash = $(this).attr('href');
+});
+
+function revertToOriginalURL() {
+    var original = window.location.href.substr(0, window.location.href.indexOf('#'))
+    history.replaceState({}, document.title, original);
+}
+
+$('.modal').on('hidden.bs.modal', function () {
+    revertToOriginalURL();
+});
+
 (function($) {
   'use strict';  
 

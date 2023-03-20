@@ -14,7 +14,15 @@
     <div class="d-flex justify-content-center text-center row ">
       {% for portfolio in site.portfolios %}
         <div class="card portfolio-item col-lg-3 col-sm-6 custom-mb-6  image-filter {{portfolio.tags}}" >
-          <a href="#{{portfolio.address}}" data-toggle="modal" data-target="#{{portfolio.address}}">
+          <script>
+            $(document).ready(function(){
+               $(window.location.hash).modal('show');
+               $('a[data-toggle="modal"]').click(function(){
+                  window.location.hash = $(this).attr('href');
+               });
+            });
+              </script>
+          <a href="#{{portfolio.address}}" click="" data-toggle="modal" data-target="#{{portfolio.address}}">
           {% if portfolio.post_image %}
             <img src="{{portfolio.post_image| relative_url}}"
               alt="{{portfolio.title}}" class="img-fluid" />
@@ -32,3 +40,4 @@
     </div>
   </div>
 </section>
+
