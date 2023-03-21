@@ -23,7 +23,7 @@
   <body itemscope  itemtype = "{{site.url}}">
 
     {% include header.html %}
-    <span itemprop="publisher">{{content}}</span>
+    <span itemprop="publisher" itemscope itemtype="{{site.url}}{{page.url}}">{{content}}</span>
     {% include footer.html %}
     <!-- JS -->
 
