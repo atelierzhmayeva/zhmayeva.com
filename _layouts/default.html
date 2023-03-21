@@ -20,10 +20,10 @@
       {% include analytics.html %}
     {% endif %}
   </head>
-  <body itemscope = "" itemtype = "{{site.url}}">
+  <body itemscope  itemtype = "" url ="{{site.url}}">
 
     {% include header.html %}
-    {{content}}
+    <span itemprop="publisher">{{content}}</span>
     {% include footer.html %}
     <!-- JS -->
 
