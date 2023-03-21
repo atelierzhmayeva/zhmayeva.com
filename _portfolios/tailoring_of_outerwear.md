@@ -3,7 +3,7 @@ title: "Пошив верхней одежды"
 date: 04.04.2022
 price: "от 30тыс."
 layout: portfolio
-post_image: "assets/images/zhmayeva/zhmayeva_poshiv_verhnej_odezhdy.jpg"
+post_image: "assets/images/zhmayeva/zhmayeva_poshiv_verhnej_odezhdi.jpg"
 header_image: "assets/images/banner_12.jpg"
 address: tailoring_of_outerwear
 tags: "Пошив верхней одежды"
