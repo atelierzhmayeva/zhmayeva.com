@@ -18,7 +18,7 @@ pagination:
             <div itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}" class="col-lg-8">
                 <div class="blogs-wrapper">
                     {% for post in paginator.posts %}
-                    <article itemprop="articleBody" itemscope itemtype="{{post.url| relative_url}}" class="mb-5">
+                    <article itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}/{{post.url}}" class="mb-5">
                         {% if post.post_image %}
                         <div class="image" >
                            <a itemprop="url" href="{{post.url| relative_url}}"><img itemprop="image" src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="feature img-fluid"/></a>
