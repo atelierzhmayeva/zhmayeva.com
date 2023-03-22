@@ -27,9 +27,12 @@ plugins:
   - jekyll/tagging
 
 cover_image: "assets/img/bg/page-title.jpg"
-
+    
 #collections
 collections:
+  posts:
+    output: true
+    permalink: /blog/:name
   features:
     output: true
   services:
@@ -104,8 +107,3 @@ jekyll-archives:
   layout: category
   permalinks:
     category: '/category/:name/'
-
-feed:
-  collections:
-    posts:
-      path: "/index.xml"
