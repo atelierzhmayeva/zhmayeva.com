@@ -15,25 +15,25 @@ pagination:
     <div class="container">
         <div class="row">
             <!-- Blogs -->
-            <div class="col-lg-8">
+            <div itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}" class="col-lg-8">
                 <div class="blogs-wrapper">
                     {% for post in paginator.posts %}
-                    <article class="mb-5">
+                    <article itemprop="articleBody" itemscope itemtype="{{post.url| relative_url}}" class="mb-5">
                         {% if post.post_image %}
-                        <div class="image">
-                            <a href="{{post.url| relative_url}}"><img src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="feature img-fluid"/></a>
+                        <div class="image" >
+                           <a itemprop="url" href="{{post.url| relative_url}}"><img itemprop="image" src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="feature img-fluid"/></a>
                         </div>
                         {% endif %}
                         <div class="content">
                             <div class="row">
                                 {% if post.date %}
                                 <div class="col">
-                                    <span class="date"><i class="lni lni-calendar"></i> {{post.date | date_to_long_string}}</span>
+                                    <span  itemprop="datePosted" class="date"><i class="lni lni-calendar"></i> {{post.date | date_to_long_string}}</span>
                                 </div>
                                 {% endif %}                                
                             </div>
-                            <h3><a href="{{post.url| relative_url}}">{{post.title}}</a></h3>
-                            <p>{{post.excerpt | strip_html | truncatewords: "30"}}</p>
+                            <h3><a href="{{post.url| relative_url}}"><span itemprop="alternateName">{{post.title}}</span></a></h3>
+                            <p itemprop="description" >{{post.excerpt | strip_html | truncatewords: "30"}}</p>
                             <a href="{{post.url| relative_url}}" class="btn dark">Читать далее...</a>
                         </div>
                     </article>
