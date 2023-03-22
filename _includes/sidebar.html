@@ -14,7 +14,7 @@
     <h4>Категории</h4>
     <ul itemprop="accessModeSufficient" itemscope itemtype="{{site.url}}{{page.url}}" class="categories_list text-left">
       {% assign categories_list = site.categories %}
-      <span itemprop="category"></span>
+      <span itemprop="category" itemscope itemtype="{{site.url}}{{page.url}}"></span>
         {% if categories_list.first[0] == null %}
           {% for category in categories_list %}
             <li><a itemprop="url" class="font-weight-bolder"  href="{{ site.url }}{{ site.baseurl }}/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"><span itemprop="name">{{ category | camelcase }}</span> <span class="float-right">({{ site.tags[category].size }})</span></a></li>

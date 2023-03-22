@@ -11,28 +11,28 @@ layout: default
     <div class="row">
       <!-- Blogs -->
       <div class="col-lg-8">
-        <article>
+        <article itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}">
           {% if page.post_image %}
           <div class="image">
-             <img src="{{page.post_image| relative_url}}" alt="{{page.title}}" class="feature img-fluid"/>
+             <img itemprop="image" src="{{page.post_image| relative_url}}" alt="{{page.title}}" class="feature img-fluid"/>
           </div>
           {% endif %}
           <div class="content">
             <div class="row custom-mb-4">
               {% if page.date %}
               <div class="col">
-                <span class="date"><i class="lni lni-calendar"></i> {{page.date | date_to_long_string}}</span>
+                <span class="date"><i class="lni lni-calendar"></i> <span itemprop="datePosted"></span>{{page.date | date_to_long_string}}</span></span>
               </div>
               {% endif %}
             </div>
-            {{page.content}}
+            <span itemprop="text">{{page.content}}</span>
           </div>
         </article>
         <div class="meta row custom-mt-5">
           {% if page.tags.size > 0 %}
           <div class="col">
             <p class="float-left">
-              <strong>Tags: </strong>
+              <strong itemprop="potentialAction">Tags: </strong>
               {{page | tags | capitalize}}
             </p>
           </div>
@@ -45,7 +45,7 @@ layout: default
         </div>
         <div class="comment_wrapper">
           <h3>Комментарии</h3>
-          {% include disqus_comments.html %}
+          <span>{% include disqus_comments.html %}</span>
         </div>
       </div>
       <!-- Sidebar -->
