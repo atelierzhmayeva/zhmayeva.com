@@ -28,10 +28,10 @@
     </ul>
   </div>
 
-  <div class="widget">
-    <h4 itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}">Последние посты</h4>
+  <div itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}" class="widget">
+    <h4>Последние посты</h4>
     {% for recent_posts in site.posts | limit: 6 %}
-    <div itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}/{{post.url}}" class="row recent">
+    <div itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}{{recent_posts.url}}" class="row recent">
       {% if recent_posts.post_image %}
       <div class="col img">
          <a itemprop="url"  href="{{recent_posts.url| relative_url}}"><img itemprop="image" src="{{recent_posts.post_image | relative_url}}" alt="blog" class="img-fluid"/></a>
