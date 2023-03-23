@@ -3,6 +3,32 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
+    <meta property="og:site_name" content="Zhmayeva">
+    {% if page.title %}<meta name="title" content="{{ page.title }}">{% endif %}
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.type %}<meta property="og:type" content="{{ page.type }}">{% endif %}
+    {% if page.title %}<meta name="og:title" content="{{ page.title }}">{% endif %}
+    {% if page.header_image %}
+    <meta name="og:image" content="{{site.url}}{{site.baseurl}}/{{ page.header_image }}">
+    {% else %}
+    <meta name="og:image" content="{{site.url}}{{site.baseurl}}/zhmayeva.com/assets/images/zhmayeva/zhmayeva_atelier_website_top.svg">
+    {% endif %}
+    <meta name="og:site_name" content="Zhmayeva">
+    <meta name="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}">
+    {% if page.description %}<meta name="og:description" content="{{ page.description }}">{% endif %}
+    {% if page.title %}<meta name="article:section" content="{{ page.title }}">{% endif %}
+    {% if page.permalink %}<meta name="twitter:card" content="{{ page.permalink }}">{% endif %}
+    <meta name="twitter:site" content="@Zhmayeva">
+    <meta name="twitter:creator" content="@Zhmayeva">
+    {% if page.title %}<meta name="twitter:title" content="{{ page.title }}">{% endif %}
+    {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% endif %}
+    {% if page.header_image %}
+    <meta name="twitter:image" content="{{site.url}}{{site.baseurl}}/{{ page.header_image }}">
+    {% else %}
+    <meta name="twitter:image" content="{{site.url}}{{site.baseurl}}/zhmayeva.com/assets/images/zhmayeva/zhmayeva_atelier_website_top.svg">
+    {% endif %}
+    <meta name="author" content="Zhmayeva">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"/>
     <!-- CSS -->
     <link rel="stylesheet" href="{{'/assets/css/bootstrap.min.css' | relative_url}}"/>
