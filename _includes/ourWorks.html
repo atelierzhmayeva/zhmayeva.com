@@ -1,35 +1,59 @@
-<section class="portfolio-2 section {% if include.extra_class %}{{include.extra_class}} {% endif %}"
-  style="margin-top: 30px; margin-bottom: 30px;">
-
+<section
+  class="portfolio-2 section {% if include.extra_class %}{{include.extra_class}} {% endif %}"
+  style="margin-top: 30px; margin-bottom: 30px"
+>
   <div class="d-flex justify-content-center bg-semi-white">
     <div class="col-lg-12 text-center">
-      <h3 class="font-weight-bold" style="margin-top: 30px;">Наши услуги</h3>
-      <div style="line-height: 0.6em; margin-top: 30px; margin-bottom: 30px;">
-        <p style="line-height: 1.2em;">Вместе соберёмся с идеями и разложим всё по полочкам.</p>
-        <p  style="line-height: 1.2em;">Также поможем с выбором ткани у наших проверенных поставщиков</p>
+      <h3 class="font-weight-bold" style="margin-top: 30px">Наши услуги</h3>
+      <div style="line-height: 0.6em; margin-top: 30px; margin-bottom: 30px">
+        <p style="line-height: 1.2em">
+          Вместе соберёмся с идеями и разложим всё по полочкам.
+        </p>
+        <p style="line-height: 1.2em">
+          Также поможем с выбором ткани у наших проверенных поставщиков
+        </p>
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 30px;">
-    <div class="d-flex justify-content-center text-center row ">
+  <div class="container" style="margin-top: 30px">
+    <div class="d-flex w-100 justify-content-center align-items-center mb-3">
+      {% include portfolioTabsMenu.html %}
+    </div>
+    <div class="d-flex justify-content-center text-center row">
       {% for portfolio in site.portfolios %}
-        <div itemprop="workExample" itemscope itemtype="{{site.url}}{{page.url}}" class="card portfolio-item col-lg-3 col-sm-6 custom-mb-6  image-filter {{portfolio.tags}}" >
-          <a href="#{{portfolio.address}}" data-toggle="modal" data-target="#{{portfolio.address}}">
+      <div
+        itemprop="workExample"
+        itemscope
+        itemtype="{{site.url}}{{page.url}}"
+        class="card portfolio-item col-lg-3 col-sm-6 custom-mb-6  image-filter {{portfolio.tags}}"
+      >
+        <a
+          href="#{{portfolio.address}}"
+          data-toggle="modal"
+          data-target="#{{portfolio.address}}"
+        >
           {% if portfolio.post_image %}
-            <img  itemprop="image" src="{{portfolio.post_image| relative_url}}"
-              alt="{{portfolio.title}}" class="img-fluid" />
-                                              
-            {% capture post_image %}{{portfolio.post_image| relative_url}}{% endcapture %}
-            {% include modal.html src=post_image  texts=portfolio.texts address=portfolio.address %}
-          {% endif %}
+          <img
+            itemprop="image"
+            src="{{portfolio.post_image| relative_url}}"
+            alt="{{portfolio.title}}"
+            class="img-fluid"
+          />
+
+          {% capture post_image %}{{portfolio.post_image| relative_url}}{%
+          endcapture %} {% include modal.html src=post_image
+          texts=portfolio.texts address=portfolio.address %} {% endif %}
           <div class="info">
-            <h5 itemprop="name" style="line-height: 0.9em;">{{portfolio.title}}</h5>
-            <p itemprop="price" style="line-height: 0.9em; margin-top: 20px;">{{portfolio.price}}</p>
+            <h5 itemprop="name" style="line-height: 0.9em">
+              {{portfolio.title}}
+            </h5>
+            <p itemprop="price" style="line-height: 0.9em; margin-top: 20px">
+              {{portfolio.price}}
+            </p>
           </div>
         </a>
-       </div>
+      </div>
       {% endfor %}
     </div>
   </div>
 </section>
-
