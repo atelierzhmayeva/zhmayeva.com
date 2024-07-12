@@ -1427,5 +1427,12 @@ html {
     &:not(:last-child) {
       border-right: 1px solid rgba(0, 0, 0, 0.1);
     }
+
+    &.selected-category {
+      -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+    }
   }
 }

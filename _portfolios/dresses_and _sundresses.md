@@ -1,5 +1,6 @@
 ---
 title: "Платья и сарафаны"
+category: "women"
 date: 02.02.2022
 price: "от 26тыс."
 layout: portfolio

@@ -1,5 +1,6 @@
 ---
 title: "Пошив верхней одежды"
+category: "men"
 date: 04.04.2022
 price: "от 45тыс."
 layout: portfolio

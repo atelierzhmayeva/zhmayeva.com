@@ -1,5 +1,6 @@
 ---
 title: "Юбки"
+category: "women"
 date: 03.03.2022
 price: "от 22тыс."
 layout: portfolio

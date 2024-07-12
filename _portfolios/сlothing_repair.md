@@ -1,5 +1,6 @@
 ---
 title: "Ремонт одежды"
+category: "repair"
 date: 08.08.2022
 price: "от 600"
 layout: portfolio

@@ -1,5 +1,6 @@
 ---
 title: "Глазковая петля на заказ"
+category: "extra"
 date: 09.09.2022
 price: "от 140"
 layout: portfolio

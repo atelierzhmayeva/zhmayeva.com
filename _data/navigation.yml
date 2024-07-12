@@ -1,9 +1,9 @@
 #Please use the main menu items under the "text"
- - text: Главная
-   url: /
- - text: О нас
-   url: about-me
- - text: Наши услуги
-   url: portfolio
- - text: Контакты
-   url: contact 
+- text: Главная
+  url: /
+- text: Наши услуги
+  url: portfolio
+- text: Контакты
+  url: contact
+- text: Блог
+  url: blog

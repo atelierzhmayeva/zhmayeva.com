@@ -1,5 +1,6 @@
 ---
 title: "Свадебные платья"
+category: "women"
 date: 01.01.2022
 price: "от 22тыс."
 layout: portfolio

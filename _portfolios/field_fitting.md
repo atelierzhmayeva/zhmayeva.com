@@ -1,5 +1,6 @@
 ---
 title: "Выездная примерка"
+category: "extra"
 date: 07.07.2022
 price: "от 3тыс."
 layout: portfolio

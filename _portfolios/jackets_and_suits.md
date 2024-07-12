@@ -1,5 +1,6 @@
 ---
 title: "Жакеты и костюмы"
+category: "men"
 date: 05.05.2022
 price: "от 55тыс."
 layout: portfolio

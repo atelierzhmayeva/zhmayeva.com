@@ -1,5 +1,6 @@
 ---
 title: "Брюки"
+category: "unisex"
 date: 06.06.2022
 price: "от 12тыс."
 layout: portfolio
