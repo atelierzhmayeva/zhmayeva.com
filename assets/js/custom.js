@@ -59,6 +59,10 @@ $(".tab-button").on("click", function () {
   applyPortfolioCategoryFilter(categoryToShow);
 });
 
+$(".up-button").on("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 (function ($) {
   "use strict";
 
