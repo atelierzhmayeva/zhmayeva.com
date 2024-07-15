@@ -1,47 +1,39 @@
- <div class="sidebar"> 
-  <div class="widget">
-    <form method="get" action="#">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" id="search-input" placeholder="Поиск" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-        <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2"><i class="lni lni-search-alt"></i></span>
-        </div>
-      </div>
-      <ul id="results-container"></ul>
-    </form>
-  </div>
+<div class="sidebar">
   <div class="widget">
     <h4>Категории</h4>
-    <ul itemprop="accessModeSufficient" itemscope itemtype="{{site.url}}{{page.url}}" class="categories_list text-left">
+    <ul
+      itemprop="accessModeSufficient"
+      itemscope
+      itemtype="{{site.url}}{{page.url}}"
+      class="categories_list text-left"
+    >
       {% assign categories_list = site.categories %}
       <span itemprop="category" itemscope itemtype="{{site.url}}{{page.url}}">
-        {% if categories_list.first[0] == null %}
-          {% for category in categories_list %}
-            <li><a itemprop="url" class="font-weight-bolder"  href="{{ site.url }}{{ site.baseurl }}/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"><span itemprop="name">{{ category | camelcase }}</span> <span class="float-right">({{ site.tags[category].size }})</span></a></li>
-          {% endfor %}
-        {% else %}
-          {% for category in categories_list %}
-            <li><a itemprop="url" class="font-weight-bolder" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"><span itemprop="name">{{ category[0] | camelcase }}</span> <span class="float-right">({{ category[1].size }})</span></a></li>
-          {% endfor %}
-        </span>
-        {% endif %}
+        {% if categories_list.first[0] == null %} {% for category in
+        categories_list %}
+        <li>
+          <a
+            itemprop="url"
+            class="font-weight-bolder"
+            href="{{ site.url }}{{ site.baseurl }}/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"
+            ><span itemprop="name">{{ category | camelcase }}</span>
+            <span class="float-right">({{ site.tags[category].size }})</span></a
+          >
+        </li>
+        {% endfor %} {% else %} {% for category in categories_list %}
+        <li>
+          <a
+            itemprop="url"
+            class="font-weight-bolder"
+            href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
+            ><span itemprop="name">{{ category[0] | camelcase }}</span>
+            <span class="float-right">({{ category[1].size }})</span></a
+          >
+        </li>
+        {% endfor %}
+      </span>
+      {% endif %}
     </ul>
   </div>
-
-  <div itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}" class="widget">
-    <h4>Последние посты</h4>
-    {% for recent_posts in site.posts | limit: 6 %}
-    <div itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}{{recent_posts.url}}" class="row recent">
-      {% if recent_posts.post_image %}
-      <div class="col img">
-         <a itemprop="url"  href="{{recent_posts.url| relative_url}}"><img itemprop="image" src="{{recent_posts.post_image | relative_url}}" alt="blog" class="img-fluid"/></a>
-      </div>
-      {% endif %}
-      <div class="col">
-        <h5><a itemprop="url" href="{{recent_posts.url| relative_url}}"><span itemprop="name">{{recent_posts.title}}</span></a></h5>
-        <p itemprop="datePosted">{{recent_posts.date | date_to_long_string}}</p>
-      </div>
-    </div>
-   {% endfor %}
-  </div>
+  <div class="widget">{% include contactsCard.html %}</div>
 </div>

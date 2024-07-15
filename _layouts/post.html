@@ -32,7 +32,7 @@ layout: default
           {% if page.tags.size > 0 %}
           <div class="col">
             <p class="float-left">
-              <strong itemprop="potentialAction">Tags: </strong>
+              <strong itemprop="potentialAction">Тэги: </strong>
               {{page | tags | capitalize}}
             </p>
           </div>
@@ -43,10 +43,7 @@ layout: default
             </div>
           </div>
         </div>
-        <div class="comment_wrapper">
-          <h3>Комментарии</h3>
-          <span>{% include disqus_comments.html %}</span>
-        </div>
+        
       </div>
       <!-- Sidebar -->
       <div class="col-lg-4">

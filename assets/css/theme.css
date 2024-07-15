@@ -61,12 +61,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Custom", "Montserrat", sans-serif;
   color: #212121;
   font-weight: 600;
 }
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Custom", "Montserrat", sans-serif;
   color: #212121;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -632,7 +632,7 @@ body {
   font-weight: 600;
   margin: 0px 0px 8px;
   font-style: italic;
-  font-family: "Montserrat";
+  font-family: "Custom", "Montserrat";
 }
 .testimonial .item span.icon {
   height: 80px;

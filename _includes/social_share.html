@@ -1,18 +1,26 @@
 <div class="blog-share-icon text-left text-md-right">
-    <div class="list-inline-item">
-        <strong><i class="lni lni-share-alt"></i> Share</strong>
-    </div>
-    <a  href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
-        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-        title="Share on Facebook" >
-        <i class="lni lni-facebook"></i>
-    </a>
-    <a  href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
-        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-        title="Share on Twitter" >
-        <i class="lni lni-twitter"></i>
-    </a>
-    <a  href="http://pinterest.com/pin/create/button/?url=&media={{ site.url }}{{page.post_image }}&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
-        <i class="lni lni-pinterest"></i>
-    </a>
+  <div class="list-inline-item">
+    <strong>Поделиться:</strong>
+  </div>
+  <a
+    href="https://vk.com/share.php?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+    title="Share on VK"
+  >
+    <i class="lni lni-vk"></i>
+  </a>
+  <a
+    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+    title="Share on Facebook"
+  >
+    <i class="lni lni-facebook"></i>
+  </a>
+  <a
+    href="http://pinterest.com/pin/create/button/?url=&media={{ site.url }}{{page.post_image }}&description="
+    onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+    title="Share on Pinterest"
+  >
+    <i class="lni lni-pinterest"></i>
+  </a>
 </div>
