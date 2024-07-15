@@ -1,8 +1,10 @@
-<div
-  class="d-flex justify-content-center align-items-center portfolio-tabs rounded flex-wrap"
->
-  {% include tabButton.html label="Мужское" category="men" %} {% include
-  tabButton.html label="Женское" category="women" %} {% include tabButton.html
-  label="Ремонт" category="repair" %} {% include tabButton.html label="Доп.
-  услуги" category="extra"%}
+<div class="portfolio-tabs rounded">
+  <div class="portfolio-subtabs">
+    {% include tabButton.html label="Мужское" category="men" %} {% include
+    tabButton.html label="Женское" category="women" %}
+  </div>
+  <div class="portfolio-subtabs">
+    {% include tabButton.html label="Ремонт" category="repair" %} {% include
+    tabButton.html label="Доп. услуги" category="extra"%}
+  </div>
 </div>

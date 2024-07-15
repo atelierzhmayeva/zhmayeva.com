@@ -1425,11 +1425,30 @@ html {
 }
 
 .portfolio-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  min-width: max-content;
+
+  div.portfolio-subtabs {
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: max-content;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
 
   .tab-button {
     border: none;
+    min-width: max-content;
+    white-space: nowrap;
+    justify-content: center;
+    flex-shrink: 0;
 
     &:not(:last-child) {
       border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -1440,6 +1459,51 @@ html {
       -moz-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
       box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
       font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .portfolio-tabs {
+    flex-direction: column;
+
+    div.portfolio-subtabs {
+      width: 100%;
+      min-width: 350px;
+      border-right: none !important;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-button {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .portfolio-tabs {
+    flex-direction: column;
+
+    div.portfolio-subtabs {
+      border-right: none !important;
+      min-width: max-content;
+      flex-wrap: wrap;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-button {
+        flex-basis: 100%;
+        border-right: none !important;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
     }
   }
 }
