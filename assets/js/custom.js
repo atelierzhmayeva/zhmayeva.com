@@ -63,6 +63,10 @@ $(".up-button").on("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+$("#call-widget").on("click", function () {
+  $(this).toggleClass("opened");
+});
+
 (function ($) {
   "use strict";
 
