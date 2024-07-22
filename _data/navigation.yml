@@ -2,8 +2,8 @@
 - text: Главная
   url: /
 - text: Наши услуги
-  url: portfolio
+  url: /portfolio
 - text: Контакты
-  url: contact
+  url: /contact
 - text: Блог
-  url: blog
+  url: /blog

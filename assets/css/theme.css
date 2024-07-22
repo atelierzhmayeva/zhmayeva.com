@@ -188,6 +188,26 @@ body {
 .main-menu .dropdown-menu {
   margin: 0;
 }
+.nav-item {
+  position: relative;
+}
+.nav-item span.underline {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  translate: -50%;
+  height: 2px;
+  border-bottom: 2px solid black;
+  width: 0px;
+}
+.nav-item span.underline.active {
+  width: calc(100% - 30px);
+}
+.nav-item:hover span.underline {
+  width: calc(100% - 30px);
+  transition: width 0.3s ease-in-out;
+}
+
 @media only screen and (min-width: 992px) {
   .dropdown:hover > .dropdown-menu {
     display: block;

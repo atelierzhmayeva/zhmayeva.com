@@ -1,36 +1,77 @@
-<a id="pramuimge-logo" title="{{site.title}}" href="{{site.url}}{{site.baseurl}}/"><img itemprop="image" src="{{'/assets/images/zhmayeva/zhmayeva_atelier_website_top.svg' | relative_url}}" style="max-width: 400px;" class="my-4 rounded mx-auto d-block" alt="{{site.title}}"/></a>
+<a
+  id="pramuimge-logo"
+  title="{{site.title}}"
+  href="{{site.url}}{{site.baseurl}}/"
+  ><img
+    itemprop="image"
+    src="{{'/assets/images/zhmayeva/zhmayeva_atelier_website_top.svg' | relative_url}}"
+    style="max-width: 400px"
+    class="my-4 rounded mx-auto d-block"
+    alt="{{site.title}}"
+/></a>
 <div class="main-menu">
-  <nav class="navbar navbar-expand-md navbar-white bg-white border-top border-bottom">
+  <nav
+    class="navbar navbar-expand-md navbar-white bg-white border-top border-bottom"
+  >
     <div class="container">
-      <button class="navbar-toggler collapsed navbar-light bg-white" type="button" data-toggle="collapse" data-target="#main-nav-1" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler collapsed navbar-light bg-white"
+        type="button"
+        data-toggle="collapse"
+        data-target="#main-nav-1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="navbar-collapse collapse" id="main-nav-1">
-      <ul class="navbar-nav mx-auto">
-         {% for menu in site.data.navigation %}
-            {% if menu.submenu %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{{index.html| relative_url}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{menu.text}}
-                </a>
-                <div class="dropdown-menu">
-                  {% for submenu_item in menu.submenu %}
-                    {% if forloop.last %}
-                      <a class="dropdown-item" href="{{submenu_item.url| relative_url}}">{{submenu_item.text}}</a>
-                    {% else %}
-                      <a class="dropdown-item" href="{{submenu_item.url| relative_url}}">{{submenu_item.text}}</a>
-                      <div class="dropdown-divider"></div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </li>
+      </button>
+      <div class="navbar-collapse collapse" id="main-nav-1">
+        <ul class="navbar-nav mx-auto">
+          {% for menu in site.data.navigation %} {% if menu.submenu %}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{{index.html| relative_url}}"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {{menu.text}}
+            </a>
+            <div class="dropdown-menu">
+              {% for submenu_item in menu.submenu %} {% if forloop.last %}
+              <a class="dropdown-item" href="{{submenu_item.url| relative_url}}"
+                >{{submenu_item.text}}</a
+              >
               {% else %}
-              <li class="nav-item"><a title="{{menu.text}}" href="{{menu.url| relative_url}}" class="nav-link">{{menu.text}}</a></li>
-            {% endif %}
-         {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
-</div>
+              <a class="dropdown-item" href="{{submenu_item.url| relative_url}}"
+                >{{submenu_item.text}}</a
+              >
+              <div class="dropdown-divider"></div>
+              {% endif %} {% endfor %}
+            </div>
+          </li>
+          {% else %}
 
+          <li class="nav-item">
+            <a
+              title="{{menu.text}}"
+              href="{{menu.url| relative_url}}"
+              class="nav-link"
+            >
+              {{menu.text}}
+            </a>
+            {% if page.url == menu.url %}
+            <span class="underline active" />
+            {% elsif page.url contains "blog" and menu.url contains "blog" %}
+            <span class="underline active" />
+            {% else %}
+            <span class="underline" />
+            {% endif %}
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
