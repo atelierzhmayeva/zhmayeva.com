@@ -1331,6 +1331,11 @@ html {
   height: 590px;
   border: 0;
 }
+.gmap {
+  width: 100%;
+  height: 590px;
+  min-height: 590px;
+}
 
 @media only screen and (min-width: 992px) {
   .arrow_1 {
