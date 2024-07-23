@@ -207,6 +207,11 @@ body {
 .nav-item:hover span.underline {
   width: calc(100% - 30px);
 }
+@media only screen and (max-width: 767px) {
+  .nav-item span.underline {
+    display: none;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover > .dropdown-menu {
