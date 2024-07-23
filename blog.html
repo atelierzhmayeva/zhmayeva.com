@@ -14,40 +14,75 @@ type: article
 {% include page_header_blog.html %}
 
 <div class="blog-default section-ptb">
-    <div class="container">
-        <div class="row">
-            <!-- Blogs -->
-            <div itemprop="articleSection" itemscope itemtype="{{site.url}}{{page.url}}" class="col-lg-8">
-                <div class="blogs-wrapper">
-                    {% for post in paginator.posts %}
-                    <article itemprop="articleBody" itemscope itemtype="{{site.url}}{{page.url}}/{{post.url}}" class="mb-5">
-                        {% if post.post_image %}
-                        <div class="image" >
-                           <a itemprop="url" href="{{post.url| relative_url}}"><img itemprop="image" src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="feature img-fluid"/></a>
-                        </div>
-                        {% endif %}
-                        <div class="content">
-                            <div class="row">
-                                {% if post.date %}
-                                <div class="col">
-                                    <span itemprop="datePosted" class="date"><i class="lni lni-calendar"></i> {{post.date | date_to_long_string}}</span>
-                                </div>
-                                {% endif %}                                
-                            </div>
-                            <h3><a href="{{post.url| relative_url}}"><span itemprop="alternateName">{{post.title}}</span></a></h3>
-                            <p itemprop="description" >{{post.excerpt | strip_html | truncatewords: "30"}}</p>
-                            <a href="{{post.url| relative_url}}" class="btn dark">Читать далее...</a>
-                        </div>
-                    </article>
-                    {% endfor %}
-                    {% include pagination.html %}
-                </div>
-            </div>
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                {% include sidebar.html %}
-            </div>
+  <div class="container">
+    <div class="row">
+      <!-- Blogs -->
+      <div class="col-lg-4 sidebar-categories-sm">
+        <div class="sidebar">
+          <div class="widget">{% include sidebar.html %}</div>
         </div>
+      </div>
+      <div
+        itemprop="articleSection"
+        itemscope
+        itemtype="{{site.url}}{{page.url}}"
+        class="col-lg-8"
+      >
+        <div class="blogs-wrapper">
+          {% for post in paginator.posts %}
+          <article
+            itemprop="articleBody"
+            itemscope
+            itemtype="{{site.url}}{{page.url}}/{{post.url}}"
+            class="mb-5"
+          >
+            {% if post.post_image %}
+            <div class="image">
+              <a itemprop="url" href="{{post.url| relative_url}}"
+                ><img
+                  itemprop="image"
+                  src="{{post.post_image | relative_url}}"
+                  alt="{{post.title}}"
+                  class="feature img-fluid"
+              /></a>
+            </div>
+            {% endif %}
+            <div class="content">
+              <div class="row">
+                {% if post.date %}
+                <div class="col">
+                  <span itemprop="datePosted" class="date"
+                    ><i class="lni lni-calendar"></i> {{post.date |
+                    date_to_long_string}}</span
+                  >
+                </div>
+                {% endif %}
+              </div>
+              <h3>
+                <a href="{{post.url| relative_url}}"
+                  ><span itemprop="alternateName">{{post.title}}</span></a
+                >
+              </h3>
+              <p itemprop="description">
+                {{post.excerpt | strip_html | truncatewords: "30"}}
+              </p>
+              <a href="{{post.url| relative_url}}" class="btn dark"
+                >Читать далее...</a
+              >
+            </div>
+          </article>
+          {% endfor %} {% include pagination.html %}
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar categories-lg">
+          <div class="widget">{% include sidebar.html %}</div>
+        </div>
+        <div class="sidebar contacts-lg">
+          <div class="widget">{% include contactsCard.html %}</div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-

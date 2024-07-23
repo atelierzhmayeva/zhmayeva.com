@@ -1375,7 +1375,20 @@ html {
   }
 }
 
+.blog-default div.sidebar-categories-sm {
+  display: none;
+}
 @media only screen and (max-width: 991px) {
+  .blog-default div.sidebar.categories-lg {
+    display: none;
+  }
+  .blog-default div.sidebar.contacts-lg div.widget {
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+  .blog-default div.sidebar-categories-sm {
+    display: block;
+  }
   .arrow_1 {
     position: absolute;
     top: 100%;
