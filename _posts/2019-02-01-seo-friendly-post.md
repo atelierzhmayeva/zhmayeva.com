@@ -3,7 +3,7 @@ layout: post
 title: "Seo Friendly Post Title venenatis a condimentum vitae"
 date: 2019-02-01 20:37:13 +0600
 tags: technology education
-categories: [Платья]
+categories: [Платья, Юбки]
 author: "ecuelass chapman"
 post_image: assets/images/blog/01.jpg
 ---
@@ -21,4 +21,4 @@ Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Nullam non 
 venenatis a condimentum vitae. Nullam non nisi est sit amet facilisis magna etiam tempor.Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Nullam non nisi est sit amet facilisis magna etiam tempor.
 venenatis a condimentum vitae. Nullam non nisi est sit amet facilisis magna etiam tempor.
 
- Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor </p>
+Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor Nullam non nisi est sit amet facilisis magna etiam tempor </p>
