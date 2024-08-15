@@ -32,3 +32,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 
 gem "webrick", "~> 1.7"
 gem "kramdown-parser-gfm"
+gem "ffi", "< 1.17.0"
