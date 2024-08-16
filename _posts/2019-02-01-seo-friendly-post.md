@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seo Friendly Post Title venenatis a condimentum vitae"
+title: "Это тестовая страница, мы работаем над улучшением контента"
 date: 2019-02-01 20:37:13 +0600
 tags: technology education
 categories: [Платья, Юбки]
