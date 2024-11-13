@@ -1,13 +1,13 @@
 ---
-title: "Пиджаки и жакеты"
-category: "unisex"
+title: "Сорочки"
+category: "men"
 date: 05.05.2022
 price: "от 55тыс."
 layout: portfolio
 post_image: "assets/images/zhmayeva/zhmayeva_poshiv_kostyumov.jpg"
 header_image: "assets/images/banner_14.jpg"
 address: jackets_and_suits
-tags: "Пиджаки и жакеты"
+tags: "Сорочки"
 texts: "Диапазон цен пошива без учёта стоимости ткани:
 </br>
 </br>
