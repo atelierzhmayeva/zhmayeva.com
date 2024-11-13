@@ -28,6 +28,7 @@ type: article
         itemtype="{{site.url}}{{page.url}}"
         class="col-lg-8"
       >
+        <h3 class="blog-header">Наш блог о создании моды</h3>
         <div class="blogs-wrapper">
           {% for post in paginator.posts %}
           <article
@@ -79,9 +80,9 @@ type: article
         <div class="sidebar categories-lg">
           <div class="widget">{% include sidebar.html %}</div>
         </div>
-        <div class="sidebar contacts-lg">
+        <!-- <div class="sidebar contacts-lg">
           <div class="widget">{% include contactsCard.html %}</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
