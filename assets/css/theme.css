@@ -1386,6 +1386,9 @@ html {
     right: 85%;
     padding-top: 25%;
   }
+  .custom-order{
+    order:2;
+  }
 }
 
 .blog-default div.sidebar-categories-sm {
@@ -1394,6 +1397,9 @@ html {
 @media only screen and (max-width: 991px) {
   .blog-default div.sidebar.categories-lg {
     display: none;
+  }
+  .custom-order{
+    order: 0;
   }
   .blog-default div.sidebar.contacts-lg div.widget {
     margin-bottom: 0px;
@@ -1563,7 +1569,7 @@ html {
 #call-widget {
   position: fixed;
   z-index: 100;
-  bottom: 20px;
+  bottom: 120px;
   right: 20px;
   height: 60px;
   width: 60px;
@@ -1634,5 +1640,9 @@ html {
         font-size: large;
       }
     }
+  }
+  
+  .animation-bounce{
+    animation: bounce 5s ease infinite;
   }
 }

@@ -8,16 +8,16 @@
         itemprop="accountablePerson"
         itemscope
         itemtype="{{site.url}}{{page.url}}"
-        class="col-md-7 {% cycle 'order-2', '' %}"
+        class="col-md-7 {% cycle 'custom-order', '' %}"
         style="padding-top: 5rem"
       >
-        <h5 itemprop="title" class="wow animated fadeIn" data-wow-delay="1.5s">
+        <h5 itemprop="title" class="wow animated fadeIn" data-wow-delay="0.2s">
           {{pro.title}}
         </h5>
         <p
           itemprop="description"
           class="wow animated fadeIn"
-          data-wow-delay="1.5s"
+          data-wow-delay="0.2s"
         >
           {{pro.text}}
         </p>
@@ -28,7 +28,7 @@
           src="{{pro.image | relative_url}}"
           alt="{{pro.alt}}"
           class="img-fluid wow animated fadeIn"
-          data-wow-delay="0.5s"
+          data-wow-delay="0.1s"
         />
       </div>
     </div>
