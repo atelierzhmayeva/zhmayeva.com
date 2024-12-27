@@ -1,0 +1,27 @@
+[
+  
+    {
+      "title"    : "Это еще одна тестовая страница, мы работаем над улучшением контента",
+      "category" : "",
+      "tags"     : "technology, education",
+      "url"      : "//blog/test-post",
+      "date"     : "2024-08-18 14:37:13 +0000"
+    } ,
+  
+    {
+      "title"    : "TEST",
+      "category" : "",
+      "tags"     : "test",
+      "url"      : "//blog/new_post",
+      "date"     : "2019-02-01 14:37:13 +0000"
+    } ,
+  
+    {
+      "title"    : "Это тестовая страница, мы работаем над улучшением контента",
+      "category" : "",
+      "tags"     : "technology, education",
+      "url"      : "//blog/seo-friendly-post",
+      "date"     : "2019-02-01 14:37:13 +0000"
+    } 
+  
+]
